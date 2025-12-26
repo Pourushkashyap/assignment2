@@ -1,0 +1,264 @@
+/* ===== HERO WRAPPER ===== */
+.hero {
+  width: 1930px;
+  height: 1170px;
+  background: #000;
+  position: relative;
+}
+
+.hero-left {
+  position: absolute;
+  top: 266px;
+  left: 99px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ===== AVATARS ===== */
+.avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatars img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #000;
+  margin-left: -12px;
+}
+
+/* ===== BADGE TEXT (D2C Marketing Agency) ===== */
+.hero-badge2 {
+  width: 207px;
+  height: 41px;
+  padding: 6px 16px;
+  border-radius: 40px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  color: #fff;
+
+  background: linear-gradient(
+    0.36deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(5px);
+}
+
+/* ===== HEADING ===== */
+.hero-title {
+  width: 615px;
+  font-size: 64px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.hero-title span{
+    font-style: italic;
+}
+
+/* ===== DESCRIPTION ===== */
+.hero-desc {
+  width: 615px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #bdbdbd;
+}
+
+
+/* ===== CTA BUTTON ===== */
+.hero-btn {
+  width: 342px;
+  height: 98px;
+
+  /* 🔧 FIX: right padding kam */
+  padding: 24px 20px 24px 20px;
+
+  /* 🔧 FIX: icon-text gap thoda kam */
+  gap: 12px;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(180deg, #0b0b0b 0%, #000000 100%);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+/* ===== ICON BOX ===== */
+.btn-icon {
+  width: 50px;
+  height: 50px;
+  background: #ff3b00;
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ===== TEXT FIX (IMPORTANT) ===== */
+.btn-text {
+  display: flex;
+  flex-direction: column;
+
+  /* 🔧 FIX: left aligned text */
+  align-items: flex-start;
+  text-align: left;
+
+  /* 🔧 FIX: text ko full width do */
+  flex: 1;
+
+  gap: 4px;
+  color: #fff;
+}
+
+/* Main text */
+.btn-text1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+
+  /* 🔧 FORCE single line */
+  white-space: nowrap;
+}
+
+/* Sub text */
+.btn-text2 {
+  font-size: 12px;
+  line-height: 14px;
+  opacity: 0.75;
+
+  /* 🔧 FORCE single line */
+  white-space: nowrap;
+}
+
+
+/* ===== LEFT 2 WRAPPER ===== */
+.left2 {
+  margin-top: 40px;
+}
+
+/* ===== TRUSTED SECTION ===== */
+.trusted {
+  width: 596.29px;
+  height:165px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* 🔧 Figma-like spacing */
+}
+
+/* Heading */
+.trusted p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* ===== LOGOS GRID ===== */
+.brands {
+  width: 596.29px;
+  height:38.76px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  row-gap: 32px;
+  column-gap: 48px;
+
+  align-items: center;
+}
+
+/* Logos */
+.brands img {
+  height: 24px;
+  opacity: 0.85;
+  object-fit: contain;
+}
+
+.img1{
+    width:50.45px;
+    height:38.76px;
+}
+.img2{
+    width:113.08px;
+    height:20.49px;
+}
+.img3{
+    width:70.26px;
+    height:29.63px;
+}
+.img4{
+    width:78.91px;
+    height:23.91px;
+}
+.img5{
+    width:64.99px;
+    height:37.13px;
+}
+.img6{
+    width:95.59px;
+    height:28.01px;
+}
+.img7{
+    width:116.58px;
+    height:29.54px;
+}
+.img8{
+    width:116.58px;
+    height:23.32px;
+}
+.img9{
+    width:58.01px;
+    height:34.33px;
+}
+.img10{
+    width:27.96px;
+    height:39.46px;
+}
+
+/* ===== RIGHT IMAGE GRID ===== */
+.hero-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 822px; /* 274 × 3 */
+  height: 1170px;
+
+  display: flex;
+  gap: 24px;
+
+  padding: 134px 24px 24px 24px;
+}
+
+/* Each column */
+.img-col {
+  width: 274px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Images */
+.img-col img {
+  width: 274px;
+  border-radius: 10px;
+  object-fit: cover;
+}

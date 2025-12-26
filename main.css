@@ -1,0 +1,443 @@
+/* Combined CSS: Merged from style.css and hero.css with fixes for Figma matching */
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 1920px;
+  height: 134px;
+  background: #FFFFFF80;
+  border: 1px solid #FFFFFF42;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ===== LEFT LOGO ===== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-rocket {
+  width: 27.18px;
+  height: 26.64px;
+}
+
+.logo-rocket img {
+  width: 100%;
+  height: 100%;
+  fill: #FF3B00;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ===== CENTER MENU ===== */
+.nav-links {
+  width: 703px;
+  height: 64px;
+  background: #08070A;
+  border-radius: 100px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 50px;
+}
+
+/* PERMANENT ACTIVE STYLE (NO HOVER FLASH) */
+.nav-links a.active {
+  background: rgba(255,255,255,0.15);
+}
+
+/* OPTIONAL subtle hover (safe for design) */
+.nav-links a:hover {
+  opacity: 0.85;
+}
+
+/* ===== CTA BUTTON ===== */
+.cta-btn {
+  width: 313px;
+  height: 74px;
+  background: #000;
+  border: 3px solid #FF3B00;
+  border-radius: 100px;
+  padding: 22px 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* CTA ROCKET */
+.cta-rocket {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+.cta-rocket img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== HERO WRAPPER (Adjusted for navbar overlap) ===== */
+.hero {
+  width: 1920px;
+  height: 1170px;
+  background: #000;
+  position: relative;
+  margin-top: -134px; /* Overlap to allow transparency show-through as in Figma */
+}
+
+.hero-left {
+  position: absolute;
+  top: 266px; /* Matched to Figma positioning (effective ~132px below navbar due to overlap) */
+  left: 99px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.left1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Added: Vertical spacing between badge, title, desc, button to match Figma */
+}
+
+/* ===== AVATARS ===== */
+.avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatars img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 2px solid #000;
+  margin-left: -12px;
+}
+
+/* ===== BADGE TEXT (D2C Marketing Agency) ===== */
+.hero-badge2 {
+  width: 207px;
+  height: 41px;
+  padding: 6px 16px;
+  border-radius: 40px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  color: #fff;
+
+  background: linear-gradient(
+    0.36deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  backdrop-filter: blur(5px);
+}
+
+/* ===== HEADING ===== */
+.hero-title {
+  width: 615px;
+  font-size: 64px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.hero-title span{
+  font-style: italic;
+}
+
+/* ===== DESCRIPTION ===== */
+.hero-desc {
+  width: 615px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  color: #bdbdbd;
+}
+
+/* ===== CTA BUTTON ===== */
+.hero-btn {
+  width: 342px;
+  height: 98px;
+  padding: 24px 24px;
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #0b0b0b 0%, #000000 100%);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===== ICON BOX ===== */
+.btn-icon {
+  width: 50px;
+  height: 50px;
+  background: #ff3b00;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ===== TEXT FIX (IMPORTANT) ===== */
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+  gap: 4px;
+  color: #fff;
+}
+
+/* Main text */
+.btn-text1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+/* Sub text */
+.btn-text2 {
+  font-size: 12px;
+  line-height: 14px;
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+/* ===== LEFT 2 WRAPPER (Removed extra margin-top; use flex gap) ===== */
+.left2 {
+  /* No margin-top: Rely on parent flex gap of 40px */
+}
+
+/* ===== TRUSTED SECTION ===== */
+.trusted {
+  width: 596px;
+  /* height: auto; Let content flow */
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Heading */
+.trusted p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* ===== LOGOS GRID (Changed to flex-wrap for better Figma wrap matching) ===== */
+.brands {
+  width: 596px;
+  /* height: auto; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px; /* Vertical/horizontal gap for wrap */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Logos */
+.brands img {
+  height: 24px;
+  opacity: 0.85;
+  object-fit: contain;
+  flex-shrink: 0; /* Prevent squish */
+}
+
+.img1 { width: 50.45px; height: 38.76px; }
+.img2 { width: 113.08px; height: 20.49px; }
+.img3 { width: 70.26px; height: 29.63px; }
+.img4 { width: 78.91px; height: 23.91px; }
+.img5 { width: 64.99px; height: 37.13px; }
+.img6 { width: 95.59px; height: 28.01px; }
+.img7 { width: 116.58px; height: 29.54px; }
+.img8 { width: 116.58px; height: 23.32px; }
+.img9 { width: 58.01px; height: 34.33px; }
+.img10 { width: 27.96px; height: 39.46px; }
+
+/* ===== RIGHT IMAGE GRID (Fixed padding to 16px all sides per Figma) ===== */
+.hero-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 822px;
+  height: 1170px;
+  display: flex;
+  gap: 24px;
+  padding: 16px; /* Fixed: Uniform 16px padding to match Figma properties */
+}
+
+/* Each column */
+.img-col {
+  width: 274px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Images (Default height 170px; overrides for tall images to match Figma proportions) */
+.img-col img {
+  width: 274px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hero-right img:nth-of-type(1) { height: 400px; } /* book1: Laptop - tall */
+.hero-right img:nth-of-type(2) { height: 170px; } /* book2 */
+.hero-right img:nth-of-type(3) { height: 170px; } /* book3 */
+.hero-right img:nth-of-type(4) { height: 300px; } /* book4: Palm tree billboard - tall */
+.hero-right img:nth-of-type(5) { height: 170px; } /* book5 */
+.hero-right img:nth-of-type(6) { height: 170px; } /* book6 */
+.hero-right img:nth-of-type(7) { height: 170px; } /* book7 */
+.hero-right img:nth-of-type(8) { height: 300px; } /* book8: Building billboard - tall */
+.hero-right img:nth-of-type(9) { height: 170px; } /* book9 */
+
+
+
+/* ===== SERVICES SECTION ===== */
+.services {
+  width: 100%;
+  background: #ffffff;
+  padding: 220px 0;
+}
+
+.services-container {
+  max-width: 1760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== HEADER ===== */
+.services-header {
+  width: 1114px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.services-tag {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: #10132c;
+  margin-bottom: 16px;
+}
+
+.services-title {
+  font-family: Inter, sans-serif;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #0b0b0b;
+  margin-bottom: 24px;
+}
+
+.services-title span {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.services-subtitle {
+  width: 608px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 120%;
+  color: #6b7280;
+}
+
+/* ===== SERVICE CARD ===== */
+.service-card {
+  width: 1760px;
+  height: 189px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 40px;
+  margin-bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-text h3 {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.service-text p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+/* ===== PLUS ICON ===== */
+.service-plus {
+  width: 36px;
+  height: 36px;
+ 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 600;
+  
+}
