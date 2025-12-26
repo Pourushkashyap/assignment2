@@ -1,6 +1,3 @@
-/* Combined CSS: Merged from style.css and hero.css with fixes for Figma matching */
-
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +9,9 @@ body {
   background: #000;
 }
 
-/* ===== NAVBAR ===== */
+
 .navbar {
-  width: 1920px;
+  width: 100%;
   height: 134px;
   background: #FFFFFF80;
   border: 1px solid #FFFFFF42;
@@ -25,11 +22,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  position: relative;
-  z-index: 10;
+
+  position: fixed;   
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
-/* ===== LEFT LOGO ===== */
+
 .logo {
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@ body {
   color: #000;
 }
 
-/* ===== CENTER MENU ===== */
+
 .nav-links {
   width: 703px;
   height: 64px;
@@ -75,17 +75,17 @@ body {
   border-radius: 50px;
 }
 
-/* PERMANENT ACTIVE STYLE (NO HOVER FLASH) */
+
 .nav-links a.active {
   background: rgba(255,255,255,0.15);
 }
 
-/* OPTIONAL subtle hover (safe for design) */
+
 .nav-links a:hover {
   opacity: 0.85;
 }
 
-/* ===== CTA BUTTON ===== */
+
 .cta-btn {
   width: 313px;
   height: 74px;
@@ -104,7 +104,7 @@ body {
   cursor: pointer;
 }
 
-/* CTA ROCKET */
+
 .cta-rocket {
   width: 30px;
   height: 30px;
@@ -116,18 +116,19 @@ body {
   height: 100%;
 }
 
-/* ===== HERO WRAPPER (Adjusted for navbar overlap) ===== */
+
 .hero {
   width: 1920px;
-  height: 1170px;
+  height: 120vh;
   background: #000;
   position: relative;
-  margin-top: -134px; /* Overlap to allow transparency show-through as in Figma */
+  padding-top: 134px; /* navbar space */
 }
+
 
 .hero-left {
   position: absolute;
-  top: 266px; /* Matched to Figma positioning (effective ~132px below navbar due to overlap) */
+  top: 266px; 
   left: 99px;
   display: flex;
   flex-direction: column;
@@ -137,10 +138,10 @@ body {
 .left1 {
   display: flex;
   flex-direction: column;
-  gap: 24px; /* Added: Vertical spacing between badge, title, desc, button to match Figma */
+  gap: 24px; 
 }
 
-/* ===== AVATARS ===== */
+
 .avatars {
   display: flex;
   align-items: center;
@@ -155,7 +156,7 @@ body {
   margin-left: -12px;
 }
 
-/* ===== BADGE TEXT (D2C Marketing Agency) ===== */
+
 .hero-badge2 {
   width: 207px;
   height: 41px;
@@ -176,7 +177,7 @@ body {
   backdrop-filter: blur(5px);
 }
 
-/* ===== HEADING ===== */
+
 .hero-title {
   width: 615px;
   font-size: 64px;
@@ -189,7 +190,7 @@ body {
   font-style: italic;
 }
 
-/* ===== DESCRIPTION ===== */
+
 .hero-desc {
   width: 615px;
   font-size: 20px;
@@ -199,7 +200,7 @@ body {
   color: #bdbdbd;
 }
 
-/* ===== CTA BUTTON ===== */
+
 .hero-btn {
   width: 342px;
   height: 98px;
@@ -213,7 +214,7 @@ body {
   cursor: pointer;
 }
 
-/* ===== ICON BOX ===== */
+
 .btn-icon {
   width: 50px;
   height: 50px;
@@ -230,7 +231,7 @@ body {
   height: 32px;
 }
 
-/* ===== TEXT FIX (IMPORTANT) ===== */
+
 .btn-text {
   display: flex;
   flex-direction: column;
@@ -241,7 +242,7 @@ body {
   color: #fff;
 }
 
-/* Main text */
+
 .btn-text1 {
   font-size: 18px;
   font-weight: 600;
@@ -249,7 +250,6 @@ body {
   white-space: nowrap;
 }
 
-/* Sub text */
 .btn-text2 {
   font-size: 12px;
   line-height: 14px;
@@ -257,44 +257,38 @@ body {
   white-space: nowrap;
 }
 
-/* ===== LEFT 2 WRAPPER (Removed extra margin-top; use flex gap) ===== */
-.left2 {
-  /* No margin-top: Rely on parent flex gap of 40px */
-}
 
-/* ===== TRUSTED SECTION ===== */
+
 .trusted {
   width: 596px;
-  /* height: auto; Let content flow */
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-/* Heading */
+
 .trusted p {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
 }
 
-/* ===== LOGOS GRID (Changed to flex-wrap for better Figma wrap matching) ===== */
+
 .brands {
   width: 596px;
-  /* height: auto; */
   display: flex;
   flex-wrap: wrap;
-  gap: 32px; /* Vertical/horizontal gap for wrap */
+  gap: 32px; 
   align-items: center;
   justify-content: flex-start;
 }
 
-/* Logos */
+
 .brands img {
   height: 24px;
   opacity: 0.85;
   object-fit: contain;
-  flex-shrink: 0; /* Prevent squish */
+  flex-shrink: 0; 
 }
 
 .img1 { width: 50.45px; height: 38.76px; }
@@ -308,46 +302,89 @@ body {
 .img9 { width: 58.01px; height: 34.33px; }
 .img10 { width: 27.96px; height: 39.46px; }
 
-/* ===== RIGHT IMAGE GRID (Fixed padding to 16px all sides per Figma) ===== */
+
 .hero-right {
   position: absolute;
-  top: 0;
+  top: 134px;
   right: 0;
   width: 822px;
-  height: 1170px;
+  height: calc(100% - 134px);
   display: flex;
   gap: 24px;
-  padding: 16px; /* Fixed: Uniform 16px padding to match Figma properties */
+  padding: 16px;
 }
 
-/* Each column */
+
+
 .img-col {
-  width: 274px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
-/* Images (Default height 170px; overrides for tall images to match Figma proportions) */
+
+
+
 .img-col img {
-  width: 274px;
-  border-radius: 10px;
+  flex: 1;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 12px; 
 }
 
-.hero-right img:nth-of-type(1) { height: 400px; } /* book1: Laptop - tall */
-.hero-right img:nth-of-type(2) { height: 170px; } /* book2 */
-.hero-right img:nth-of-type(3) { height: 170px; } /* book3 */
-.hero-right img:nth-of-type(4) { height: 300px; } /* book4: Palm tree billboard - tall */
-.hero-right img:nth-of-type(5) { height: 170px; } /* book5 */
-.hero-right img:nth-of-type(6) { height: 170px; } /* book6 */
-.hero-right img:nth-of-type(7) { height: 170px; } /* book7 */
-.hero-right img:nth-of-type(8) { height: 300px; } /* book8: Building billboard - tall */
-.hero-right img:nth-of-type(9) { height: 170px; } /* book9 */
+.book1 {
+height:50%;
+}
+
+
+.img-col-mid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  position: relative;
+  top: -134px;             
+  height: calc(100% + 134px);
+  z-index: 1;
+}
 
 
 
-/* ===== SERVICES SECTION ===== */
+
+.img-col-mid img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* exact figma-like proportions */
+.img-col-mid img:nth-child(1) {
+  flex: 1;
+}
+
+.img-col-mid img:nth-child(2),
+.img-col-mid img:nth-child(3) {
+  flex: 1;
+}
+
+
+
+.hero-right img:nth-of-type(1) { height: 400px; } 
+.hero-right img:nth-of-type(2) { height: 170px; } 
+.hero-right img:nth-of-type(3) { height: 170px; } 
+.hero-right img:nth-of-type(4) { height: 300px; } 
+.hero-right img:nth-of-type(5) { height: 170px; } 
+.hero-right img:nth-of-type(6) { height: 170px; } 
+.hero-right img:nth-of-type(7) { height: 170px; } 
+.hero-right img:nth-of-type(8) { height: 300px; } 
+.hero-right img:nth-of-type(9) { height: 170px; } 
+
+
+
+
 .services {
   width: 100%;
   background: #ffffff;
@@ -362,12 +399,39 @@ body {
   align-items: center;
 }
 
-/* ===== HEADER ===== */
+
 .services-header {
-  width: 1114px;
+  width: 1225px;
   text-align: center;
   margin-bottom: 80px;
 }
+
+
+.services-container {
+  position: relative;
+}
+
+
+.services-arrow-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+
+.bottom-right {
+  position: absolute;
+bottom: -60px;   
+  right: 30px;
+}
+
+.bottom-right img {
+  width: 10vw;
+  height: 18vh;
+  transform: rotate(4deg);
+}
+
+
+
 
 .services-tag {
   display: block;
@@ -400,7 +464,7 @@ body {
   color: #6b7280;
 }
 
-/* ===== SERVICE CARD ===== */
+
 .service-card {
   width: 1760px;
   height: 189px;
@@ -408,7 +472,6 @@ body {
   border-radius: 10px;
   padding: 40px;
   margin-bottom: 24px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -427,17 +490,40 @@ body {
   color: #000000;
 }
 
-/* ===== PLUS ICON ===== */
+
 .service-plus {
   width: 36px;
   height: 36px;
- 
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 20px;
   font-weight: 600;
   
 }
+
+.circle-wrapper {
+  position: relative;
+  width: 64px;     
+  height: 64px;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;    
+  font-weight: 600;
+  color: #000;         
+  line-height: 1;
+  pointer-events: none;
+}
+
+
